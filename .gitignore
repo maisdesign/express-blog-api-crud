@@ -1,0 +1,4 @@
+*.zip
+.github
+node_modules
+.github/agents

@@ -1,0 +1,33 @@
+{
+  "name": "express-blog-api-crud",
+  "version": "1.0.0",
+  "description": "API REST CRUD per un blog con Express. Struttura con controller separati e dati mock. Implementa le operazioni Index, Show e Destroy sui post con risposte JSON e gestione degli errori 404.",
+  "keywords": [
+    "express",
+    "blog",
+    "api",
+    "crud",
+    "rest"
+  ],
+  "homepage": "https://github.com/maisdesign/express-blog-api-crud#readme",
+  "bugs": {
+    "url": "https://github.com/maisdesign/express-blog-api-crud/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maisdesign/express-blog-api-crud.git"
+  },
+  "license": "ISC",
+  "author": "Marco Cardia",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "watch": "node --watch app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "serve-static": "^2.2.1"
+  },
+  "devDependencies": {}
+}
