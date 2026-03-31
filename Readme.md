@@ -71,7 +71,7 @@ npm run watch
 ├─ controllers/
 │  └─ postsController.js
 ├─ data/
-│  └─ posts.js
+│  └─ posts-data.js
 ├─ routers/
 │  └─ posts.js
 ├─ app.js
