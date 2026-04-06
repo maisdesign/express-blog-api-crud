@@ -7,7 +7,7 @@ router.get('/', postsController.index);
 router.get('/:id', postsController.show);
 // store
 router.post('/', postsController.store);
-// delete
+// destroy
 router.delete('/:id', postsController.delete);
 //update
 router.put('/:id', postsController.update);
