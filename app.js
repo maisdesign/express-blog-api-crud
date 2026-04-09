@@ -8,7 +8,7 @@ app.use(express.static('assets'))
 app.use("/posts", postsRouter)
 app.get('/', (req, res) => {
 
-    res.type("html").send(`Server del mio blog`)
+    res.type("html").send(`Server del mio blog test`)
 }
 )
 

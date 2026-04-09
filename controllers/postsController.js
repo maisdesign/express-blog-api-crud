@@ -1,7 +1,13 @@
 const postsData = require('../data/posts-data.js')
 // index
 function postsJson(req, res) {
-    res.json(postsData);
+    console.log(req.query.tag);
+    const tags = req.query.tags;
+    if (tags) {
+        res.json(postsData.filter((post) => post.tags.includes(tags)))
+    } else {
+        res.json(postsData);
+    }
 };
 
 // show
