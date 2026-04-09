@@ -12,7 +12,12 @@ function postsJson(req, res) {
 
 // show
 function postsShow(req, res) {
-    res.json(postsData.find((posty) => posty.id === parseInt(req.params.id)));
+    const found = postsData.find((posty) => posty.id === parseInt(req.params.id))
+    if (!found) {
+        res.status(404).json({ error: "Post non trovato" });
+    } else {
+        res.json(found);
+    }
 };
 
 // store
@@ -22,11 +27,16 @@ function postsStore(req, res) {
 // destroy
 function postsDelete(req, res) {
     const indexDaRimuovere = postsData.findIndex((posty) => posty.id === parseInt(req.params.id))
-    postsData.splice(
-        indexDaRimuovere, 1
-    );
-    console.log(postsData);
-    res.sendStatus(204);
+    if (indexDaRimuovere === -1) {
+        res.status(404).json({ error: "Post non trovato" });
+    } else {
+        postsData.splice(
+            indexDaRimuovere, 1
+        );
+        console.log(postsData);
+        res.sendStatus(204);
+    }
+
 };
 //update
 function postsUpdate(req, res) {
